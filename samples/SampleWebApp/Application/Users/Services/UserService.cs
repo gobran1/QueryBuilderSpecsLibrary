@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using QueryBuilderSpecs.Extensions;
 using QueryBuilderSpecs.Interfaces;
-using QueryBuilderSpecs.samples.SampleWebApp.Application.Users.Filters;
-using QueryBuilderSpecs.samples.SampleWebApp.Domain.Users;
-using QueryBuilderSpecs.samples.SampleWebApp.Infrastructure.Data;
+using SampleWebApp.Application.Users.Filters;
+using SampleWebApp.Domain.Users;
+using SampleWebApp.Infrastructure.Data;
 
-namespace QueryBuilderSpecs.samples.SampleWebApp.Application.Users.Services;
+namespace SampleWebApp.Application.Users.Services;
 
 public class UserService
 {

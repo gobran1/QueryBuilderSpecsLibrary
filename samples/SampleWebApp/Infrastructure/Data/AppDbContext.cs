@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using QueryBuilderSpecs.samples.SampleWebApp.Domain.Users;
+using SampleWebApp.Domain.Users;
 
-namespace QueryBuilderSpecs.samples.SampleWebApp.Infrastructure.Data;
+namespace SampleWebApp.Infrastructure.Data;
 
 public class AppDbContext : DbContext
 {

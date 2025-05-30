@@ -1,15 +1,17 @@
-using QueryBuilderSpecs.samples.SampleWebApp.Application.Users.Filters;
-using QueryBuilderSpecs.samples.SampleWebApp.Domain.Users;
+using QueryBuilderSpecs.Extensions;
+using SampleWebApp.Application.Users.Filters;
+using SampleWebApp.Domain.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+//configuration for the library
 builder.Services.UseQuerySpecificationBuilder();
-builder.AddFilterBuilder<User,UserFilter,UserFilterBuilder>();
+builder.Services.AddFilterBuilder<User,UserFilter,UserFilterBuilder>();
+
 
 
 var app = builder.Build();
@@ -26,6 +28,7 @@ app.UseHttpsRedirection();
 
 app.MapGet("/test-user-uow", () =>
     {
+        
         
         return 200;
     })

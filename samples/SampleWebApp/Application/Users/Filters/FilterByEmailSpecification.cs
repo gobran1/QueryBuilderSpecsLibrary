@@ -1,7 +1,7 @@
-using QueryBuilderSpecs.samples.SampleWebApp.Domain.Users;
 using QueryBuilderSpecs.Specifications;
+using SampleWebApp.Domain.Users;
 
-namespace QueryBuilderSpecs.samples.SampleWebApp.Application.Users.Filters;
+namespace SampleWebApp.Application.Users.Filters;
 
 public class FilterByEmailSpecification: BaseSpecification<User>,ISpecification<User>
 {

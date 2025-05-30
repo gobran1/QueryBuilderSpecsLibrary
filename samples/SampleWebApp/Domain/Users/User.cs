@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace QueryBuilderSpecs.samples.SampleWebApp.Domain.Users;
+namespace SampleWebApp.Domain.Users;
 
 public class User
 {

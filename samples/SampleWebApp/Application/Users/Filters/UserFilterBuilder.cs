@@ -1,8 +1,8 @@
 using QueryBuilderSpecs.Interfaces;
 using QueryBuilderSpecs.QueryBuilder;
-using QueryBuilderSpecs.samples.SampleWebApp.Domain.Users;
+using SampleWebApp.Domain.Users;
 
-namespace QueryBuilderSpecs.samples.SampleWebApp.Application.Users.Filters;
+namespace SampleWebApp.Application.Users.Filters;
 
 public class UserFilterBuilder: GenericFiltersBuilder<User,UserFilter>,IGenericFiltersBuilder<User,UserFilter> 
 {
