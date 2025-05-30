@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>GibranFahed</Authors>
+    <PackageId>QueryBuilderSpecs</PackageId>
+    <Description>Clean querying with Specification,Apply Query Filters When Exist In Clean Way,User Generic Repository,Use UnitOfWork</Description>
+    <PackageTags>specification repository unitofwork QueryFilters</PackageTags>
+    <RepositoryUrl>https://github.com/gobran1/QueryBuilderSpecsLibrary</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.5" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="samples\**" />     
+  </ItemGroup>
+  
+  
+</Project>

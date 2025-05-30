@@ -1,4 +1,5 @@
-﻿using QueryBuilderSpecs.Interfaces;
+﻿using Microsoft.Extensions.DependencyInjection;
+using QueryBuilderSpecs.Interfaces;
 using QueryBuilderSpecs.Repositories;
 using QueryBuilderSpecs.WorkManager;
 

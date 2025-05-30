@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using QueryBuilderSpecs.Interfaces;
 
 namespace QueryBuilderSpecs.WorkManager
