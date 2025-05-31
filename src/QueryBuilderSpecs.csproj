@@ -5,12 +5,22 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Authors>GibranFahed</Authors>
     <PackageId>QueryBuilderSpecs</PackageId>
-    <Description>Clean querying with Specification,Apply Query Filters When Exist In Clean Way,User Generic Repository,Use UnitOfWork</Description>
-    <PackageTags>specification repository unitofwork QueryFilters</PackageTags>
+    
+    <Description>
+      Provides a clean and extensible way to build database queries using the Specification Pattern.
+      Includes support for applying filters dynamically, Generic Repository, and Unit of Work integration.
+      Designed for maintainability and scalability in modern .NET applications.
+    </Description>
+
+    <PackageTags>Specification;QueryBuilder;Repository;UnitOfWork;EFCore</PackageTags>
+
+    <PackageProjectUrl>https://github.com/gobran1/QueryBuilderSpecsLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gobran1/QueryBuilderSpecsLibrary</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   
