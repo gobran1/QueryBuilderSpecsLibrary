@@ -7,12 +7,12 @@ using QueryBuilderSpecs.Specifications;
 
 namespace QueryBuilderSpecs.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<TDBContext,T> : IGenericRepository<TDBContext,T> where T : class where TDBContext : DbContext
     {
-        protected readonly DbContext context;
+        protected readonly TDBContext context;
         protected readonly DbSet<T> dbSet;
 
-        public GenericRepository(DbContext context)
+        public GenericRepository(TDBContext context)
         {
             this.context = context;
             this.dbSet = context.Set<T>();

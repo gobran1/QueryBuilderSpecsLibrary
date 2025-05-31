@@ -1,10 +1,11 @@
 ﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using QueryBuilderSpecs.DTO.Pagination;
 using QueryBuilderSpecs.Specifications;
 
 namespace QueryBuilderSpecs.Interfaces
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<TDBContext,T> where T : class where TDBContext : DbContext
     {
         public Task<T> ExecuteSingleRawQueryAsync(string rawSql, Func<IQueryable<T>, IQueryable<T>> extendQuery = null);
         public Task<int> ExecuteCountQueryAsync(string rawSql, Func<IQueryable<T>, IQueryable<T>> extendQuery = null);

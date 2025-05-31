@@ -4,21 +4,21 @@ using QueryBuilderSpecs.Interfaces;
 
 namespace QueryBuilderSpecs.WorkManager
 {
-    public class UnitOfWork : IUnitOfWork, IDisposable
+    public class UnitOfWork<TDBContext> : IUnitOfWork<TDBContext>, IDisposable where TDBContext : DbContext
     {
 
-        private readonly DbContext context;
+        private readonly TDBContext context;
         private readonly IServiceProvider serviceProvider;
 
-        public UnitOfWork(DbContext context, IServiceProvider serviceProvider)
+        public UnitOfWork(TDBContext context, IServiceProvider serviceProvider)
         {
             this.context = context;
             this.serviceProvider = serviceProvider;
         }
 
-        public IGenericRepository<TEntity> Repository<TEntity>() where TEntity : class
+        public IGenericRepository<TDBContext,TEntity> Repository<TEntity>() where TEntity : class
         {
-            return serviceProvider.GetRequiredService<IGenericRepository<TEntity>>();
+            return serviceProvider.GetRequiredService<IGenericRepository<TDBContext,TEntity>>();
         }
 
         public void Dispose()
