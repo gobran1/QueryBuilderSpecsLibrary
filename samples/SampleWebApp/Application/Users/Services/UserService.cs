@@ -9,11 +9,11 @@ namespace SampleWebApp.Application.Users.Services;
 
 public class UserService
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly IUnitOfWork<AppDbContext> _unitOfWork;
     private readonly AppDbContext _context;
     private readonly IGenericFiltersBuilder<User, UserFilter> _userFilterBuilder;
 
-    public UserService(IUnitOfWork  unitOfWork,AppDbContext context,IGenericFiltersBuilder<User,UserFilter> userFilterBuilder)
+    public UserService(IUnitOfWork<AppDbContext>  unitOfWork,AppDbContext context,IGenericFiltersBuilder<User,UserFilter> userFilterBuilder)
     {
         _unitOfWork = unitOfWork;
         _context = context;
